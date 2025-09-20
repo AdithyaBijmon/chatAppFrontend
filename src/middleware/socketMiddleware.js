@@ -2,7 +2,7 @@ import { io } from 'socket.io-client';
 import { addmessage, setStatus, setMyId } from '../redux/chatSlice';
 
 export const socketMiddleware = (store) => {
-    const socket = io('http://localhost:4000')
+    const socket = io('https://chatappserver-4pfz.onrender.com')
 
     socket.on('receive_message', (messageObj) => {
         store.dispatch(addmessage(messageObj))
