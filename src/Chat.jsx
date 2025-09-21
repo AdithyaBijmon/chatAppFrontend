@@ -36,11 +36,11 @@ function Chat() {
     }, [messages]);
 
     const sendMessage = () => {
-        if (inputMessage.trim() && myId) { // <-- Ensure myId is not null
-            // Create the payload with the message and senderId
+        if (inputMessage.trim() && myId) { 
+           
             const payload = {
                 message: inputMessage,
-                senderId: myId, // <-- Include the ID here
+                senderId: myId, 
             };
 
             dispatch({ type: 'chat/sendMessage', payload: payload });
